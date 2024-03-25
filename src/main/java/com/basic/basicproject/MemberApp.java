@@ -8,7 +8,11 @@ import com.basic.basicproject.member.MemberServiceImpl;
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService(); // appconfig에서 모두 결정
+
+        //MemberService memberService = new MemberServiceImpl(memberRepository);
         Member memberA = new Member(1L, "memberA", Grade.VIP);
         memberService.join(memberA);
 
