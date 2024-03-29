@@ -4,6 +4,13 @@ public class MemberServiceImpl implements MemberService { // 구현체 하나일
 
     private final MemberRepository memberRepository;
 
+    //테스트 용도
+    public MemberRepository getMemberRepository() {
+        return memberRepository;
+    }
+
+
+
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
