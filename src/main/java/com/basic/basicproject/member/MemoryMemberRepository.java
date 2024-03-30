@@ -2,7 +2,9 @@ package com.basic.basicproject.member;
 
 import java.util.HashMap;
 import java.util.Map;
+import org.springframework.stereotype.Component;
 
+@Component
 public class MemoryMemberRepository implements MemberRepository{
 
     private static Map<Long, Member> store = new HashMap<>(); // 원래대로라면 실무에서 concurrentHash를 써야함
